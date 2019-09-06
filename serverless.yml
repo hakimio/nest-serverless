@@ -1,0 +1,31 @@
+service:
+  name: nest-serverless-hello-world
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+  - serverless-plugin-optimize
+
+custom:
+  stage: ${opt:stage, self:provider.stage}
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  region: eu-central-1
+
+functions:
+  main:
+    handler: src/lambda.handler
+    events:
+      - http:
+          cors: true
+          path: "{proxy+}"
+          method: any
+      - http:
+          cors: true
+          path: "/"
+          method: any
+
+package:
+  individually: true
