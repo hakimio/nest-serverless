@@ -1,3 +1,9 @@
+# WARNING: this example is only meant to be used for showing the issue with fastify and serverless framework on AWS lambda
+To reproduce the issue run the following after installing all the dependecies:
+```bash
+yarn run test:sls
+```
+
 # Simple NestJS Serverless example
 Very simple serverless "Hello world" type example using NestJS, Serverless framework and AWS lambda function
 
