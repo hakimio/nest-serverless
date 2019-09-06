@@ -1,4 +1,4 @@
-# WARNING: this example is only meant to be used for showing the issue with fastify and serverless framework on AWS lambda
+# WARNING: this example is only meant to be used for showing an issue with fastify and serverless framework on AWS lambda
 To reproduce the issue run the following after installing all the dependecies:
 ```bash
 yarn run test:sls
